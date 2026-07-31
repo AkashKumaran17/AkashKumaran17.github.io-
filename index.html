@@ -1,3 +1,4 @@
+Portfolio · HTML
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,11 +6,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Akash Kumaran T — SOC Analyst / Security Engineering Portfolio</title>
 <meta name="description" content="Akash Kumaran T — Cyber Security student. SIEM monitoring, malware triage, phishing detection, web vulnerability assessment. Interactive terminal portfolio.">
-
+ 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-
+ 
 <style>
 /* ============================= TOKENS ============================= */
 :root{
@@ -18,7 +19,7 @@
   --panel-2:   #141B2B;
   --line:      #232C42;
   --line-soft: rgba(120,140,200,0.12);
-
+ 
   --green:     #39FF8A;
   --green-dim: #1C8C52;
   --amber:     #FFA94D;
@@ -26,20 +27,20 @@
   --cyan:      #4FD1E8;
   --cyan-dim:  #267E8C;
   --red:       #FF5C6C;
-
+ 
   --text-hi:   #E8EAF0;
   --text-mid:  #8B93AC;
   --text-low:  #545C78;
-
+ 
   --display: 'Fraunces', serif;
   --mono: 'JetBrains Mono', monospace;
   --body: 'Inter', sans-serif;
-
+ 
   --max: 1200px;
   --edge: 28px;
 }
 @media (max-width:640px){ :root{ --edge:18px; } }
-
+ 
 *{ margin:0; padding:0; box-sizing:border-box; }
 html{ scroll-behavior:smooth; }
 body{
@@ -56,23 +57,21 @@ img{ max-width:100%; display:block; }
 a{ color:inherit; text-decoration:none; }
 ul{ list-style:none; }
 button{ font:inherit; }
-
+ 
 :focus-visible{ outline:2px solid var(--green); outline-offset:3px; border-radius:2px; }
-
+ 
 @media (prefers-reduced-motion: reduce){
   *{ animation-duration:0.001ms !important; animation-iteration-count:1 !important; transition-duration:0.001ms !important; scroll-behavior:auto !important; }
 }
-
+ 
 .wrap{ max-width:var(--max); margin:0 auto; padding-left:var(--edge); padding-right:var(--edge); }
-
-/* ambient cursor-reactive glow */
+ 
 #ambient{
   position:fixed; inset:0; pointer-events:none; z-index:0;
   background: radial-gradient(600px circle at var(--mx,50%) var(--my,20%), rgba(57,255,138,0.05), transparent 60%);
   transition:background .1s linear;
 }
-
-/* grid texture */
+ 
 .grid-bg{
   position:absolute; inset:0;
   background-image:
@@ -83,24 +82,23 @@ button{ font:inherit; }
   opacity:0.6;
   pointer-events:none;
 }
-
+ 
 .eyebrow{
   font-family:var(--mono); font-size:11px; letter-spacing:0.12em; text-transform:uppercase;
   color:var(--cyan); display:flex; align-items:center; gap:8px;
 }
 .eyebrow::before{ content:''; width:6px;height:6px; background:var(--cyan); border-radius:50%; box-shadow:0 0 6px var(--cyan); animation:blink 2s infinite; }
 @keyframes blink{ 0%,100%{opacity:1;} 50%{opacity:0.25;} }
-
+ 
 h1,h2,h3{ font-family:var(--display); font-weight:600; letter-spacing:-0.01em; color:var(--text-hi); }
-
-/* decode-on-scroll heading */
+ 
 .decode{ display:inline-block; }
 .decode .ch{ display:inline-block; }
-
+ 
 /* ============================= NAV ============================= */
 .nav{
   position:fixed; top:0; left:0; right:0; z-index:200;
-  background:rgba(8,11,18,0.82); backdrop-filter:blur(10px);
+  background:rgba(8,11,18,0.86); backdrop-filter:blur(10px);
   border-bottom:1px solid var(--line-soft);
 }
 .nav-inner{ max-width:var(--max); margin:0 auto; padding:14px var(--edge); display:flex; align-items:center; justify-content:space-between; }
@@ -114,33 +112,33 @@ h1,h2,h3{ font-family:var(--display); font-weight:600; letter-spacing:-0.01em; c
 .nav-status{ font-family:var(--mono); font-size:11.5px; color:var(--green); display:flex; align-items:center; gap:6px; }
 .nav-status .dot{ width:6px; height:6px; border-radius:50%; background:var(--green); box-shadow:0 0 6px var(--green); animation:blink 1.6s infinite; }
 @media (max-width:780px){ .nav-links{ display:none; } }
-
-/* ============================= HERO / TERMINAL ============================= */
+ 
+/* ============================= HERO / TERMINAL (kept intact) ============================= */
 .hero{ position:relative; padding:140px 0 90px; border-bottom:1px solid var(--line-soft); overflow:hidden; }
 .hero-grid{ position:relative; display:grid; grid-template-columns:1fr 1.05fr; gap:48px; align-items:start; z-index:1; }
 @media (max-width:980px){ .hero-grid{ grid-template-columns:1fr; } }
-
+ 
 .boot-line{ font-family:var(--mono); font-size:12px; color:var(--text-low); margin-bottom:20px; min-height:18px; }
 .boot-line .ok{ color:var(--green); }
-
+ 
 .hero h1{ font-size:clamp(2.3rem,4.6vw,3.6rem); line-height:1.08; margin-bottom:18px; }
 .hero h1 .accent{ color:var(--green); font-style:italic; }
 .hero .role-line{ font-family:var(--mono); font-size:14.5px; color:var(--cyan); margin-bottom:20px; }
 .hero p.lead{ font-size:16.5px; color:var(--text-mid); max-width:520px; margin-bottom:30px; }
-
+ 
 .hero-actions{ display:flex; gap:14px; flex-wrap:wrap; margin-bottom:42px; }
 .btn{ font-family:var(--mono); font-size:13px; padding:13px 22px; border-radius:3px; display:inline-flex; align-items:center; gap:8px; transition:all .15s; cursor:pointer; border:1px solid transparent; }
 .btn-primary{ background:var(--green); color:#04150B; font-weight:700; }
 .btn-primary:hover{ background:#5fffa3; transform:translateY(-1px); box-shadow:0 6px 18px rgba(57,255,138,0.25); }
 .btn-ghost{ border:1px solid var(--line); color:var(--text-hi); }
 .btn-ghost:hover{ border-color:var(--cyan); color:var(--cyan); }
-
+ 
 .hero-stats{ display:flex; gap:32px; flex-wrap:wrap; border-top:1px solid var(--line-soft); padding-top:26px; }
 .stat .num{ font-family:var(--display); font-size:1.95rem; font-weight:600; color:var(--text-hi); line-height:1; }
 .stat .num .unit{ font-size:1.05rem; color:var(--green); }
 .stat .label{ font-family:var(--mono); font-size:10.5px; color:var(--text-low); text-transform:uppercase; letter-spacing:0.06em; margin-top:6px; }
-
-/* terminal */
+ 
+/* terminal — untouched, as requested */
 .terminal{
   background:#060911; border:1px solid var(--line); border-radius:8px;
   box-shadow:0 30px 70px rgba(0,0,0,0.55), 0 0 0 1px rgba(57,255,138,0.04);
@@ -187,7 +185,7 @@ h1,h2,h3{ font-family:var(--display); font-weight:600; letter-spacing:-0.01em; c
   cursor:pointer; transition:all .15s;
 }
 .term-hint button:hover{ border-color:var(--green); color:var(--green); }
-
+ 
 /* threat feed ticker */
 .ticker-wrap{
   border-bottom:1px solid var(--line-soft);
@@ -211,14 +209,14 @@ h1,h2,h3{ font-family:var(--display); font-weight:600; letter-spacing:-0.01em; c
 .ticker-wrap:hover .ticker-track{ animation-play-state:paused; }
 .ticker-track span{ color:var(--green); margin-right:8px; }
 @keyframes ticker{ from{ transform:translateX(0); } to{ transform:translateX(-50%); } }
-
+ 
 /* ============================= SECTION SHELL ============================= */
 section{ padding:92px 0; border-bottom:1px solid var(--line-soft); position:relative; }
 .section-head{ display:flex; justify-content:space-between; align-items:flex-end; gap:24px; margin-bottom:46px; flex-wrap:wrap; }
 .section-head h2{ font-size:clamp(1.8rem,3vw,2.4rem); }
-.section-tag{ font-family:var(--mono); font-size:12px; color:var(--text-low); max-width:320px; text-align:right; }
+.section-tag{ font-family:var(--mono); font-size:12px; color:var(--text-low); max-width:340px; text-align:right; }
 @media (max-width:700px){ .section-tag{ text-align:left; } }
-
+ 
 /* ============================= ABOUT ============================= */
 .about-grid{ display:grid; grid-template-columns:1fr 1fr; gap:48px; }
 @media (max-width:840px){ .about-grid{ grid-template-columns:1fr; } }
@@ -229,7 +227,7 @@ section{ padding:92px 0; border-bottom:1px solid var(--line-soft); position:rela
 .field-row .k{ color:var(--text-low); }
 .field-row .v{ color:var(--text-hi); }
 .field-row .v a:hover{ color:var(--cyan); }
-
+ 
 /* ============================= SKILL RADAR ============================= */
 .skills-layout{ display:grid; grid-template-columns:0.9fr 1.1fr; gap:48px; align-items:center; }
 @media (max-width:900px){ .skills-layout{ grid-template-columns:1fr; } }
@@ -241,10 +239,10 @@ section{ padding:92px 0; border-bottom:1px solid var(--line-soft); position:rela
 .radar-shape{ fill:rgba(57,255,138,0.12); stroke:var(--green); stroke-width:2; transition:opacity .2s; }
 .radar-point{ fill:var(--green); cursor:pointer; transition:r .15s; }
 .radar-point:hover{ r:7; }
-
+ 
 .skill-detail{ font-family:var(--mono); font-size:12px; color:var(--text-low); min-height:20px; margin-top:14px; text-align:center; }
 .skill-detail .v{ color:var(--green); }
-
+ 
 .locker{ display:flex; flex-direction:column; gap:1px; background:var(--line); border:1px solid var(--line); border-radius:6px; overflow:hidden; }
 .locker-cell{ background:var(--panel); padding:20px 22px; transition:background .2s; cursor:default; }
 .locker-cell:hover{ background:var(--panel-2); }
@@ -255,7 +253,7 @@ section{ padding:92px 0; border-bottom:1px solid var(--line-soft); position:rela
 .locker-cell h3{ font-family:var(--body); font-size:14.5px; font-weight:700; margin-bottom:12px; color:var(--text-hi); }
 .locker-cell ul{ display:flex; flex-wrap:wrap; gap:7px; }
 .locker-cell li{ font-family:var(--mono); font-size:11.5px; color:var(--text-mid); background:rgba(255,255,255,0.04); border:1px solid var(--line); padding:4px 9px; border-radius:3px; }
-
+ 
 /* ============================= PROJECTS — scan cards ============================= */
 .projects{ display:flex; flex-direction:column; gap:16px; }
 .proj{
@@ -278,18 +276,18 @@ section{ padding:92px 0; border-bottom:1px solid var(--line-soft); position:rela
 .status-done{ background:rgba(57,255,138,0.12); color:var(--green); border:1px solid var(--green-dim); }
 .proj-chevron{ color:var(--text-low); transition:transform .25s; font-family:var(--mono); }
 .proj.open .proj-chevron{ transform:rotate(180deg); color:var(--green); }
-
+ 
 .proj-body{ max-height:0; overflow:hidden; transition:max-height .35s ease; }
 .proj.open .proj-body{ max-height:600px; }
 .proj-body-inner{ padding:0 24px 26px; border-top:1px solid var(--line-soft); }
 .proj-body-inner p{ color:var(--text-mid); font-size:14.5px; margin:18px 0 16px; max-width:680px; }
 .proj-tags{ display:flex; gap:7px; flex-wrap:wrap; margin-bottom:6px; }
 .proj-tags span{ font-family:var(--mono); font-size:11px; color:var(--cyan); border:1px solid var(--cyan-dim); padding:3px 8px; border-radius:2px; }
-
+ 
 .scan-bar{ height:3px; background:var(--line); border-radius:2px; overflow:hidden; margin:14px 0 4px; }
 .scan-bar-fill{ height:100%; width:0%; background:linear-gradient(90deg, var(--green), var(--cyan)); transition:width 1.4s cubic-bezier(.3,.8,.3,1); }
 .scan-label{ font-family:var(--mono); font-size:10.5px; color:var(--text-low); display:flex; justify-content:space-between; }
-
+ 
 /* ============================= CERTIFICATIONS ============================= */
 .cert-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
 @media (max-width:900px){ .cert-grid{ grid-template-columns:repeat(2,1fr); } }
@@ -308,7 +306,7 @@ section{ padding:92px 0; border-bottom:1px solid var(--line-soft); position:rela
 .cert .issuer{ font-family:var(--mono); font-size:10.5px; color:var(--text-low); text-transform:uppercase; letter-spacing:0.06em; margin-bottom:10px; }
 .cert h4{ font-family:var(--body); font-weight:700; font-size:14.5px; margin-bottom:8px; line-height:1.3; color:var(--text-hi); padding-right:60px; }
 .cert .date{ font-family:var(--mono); font-size:11px; color:var(--text-low); margin-top:14px; padding-top:12px; border-top:1px dashed var(--line); }
-
+ 
 /* ============================= TIMELINE ============================= */
 .log{ position:relative; padding-left:32px; }
 .log::before{ content:''; position:absolute; left:5px; top:6px; bottom:6px; width:1px; background:var(--line); }
@@ -318,7 +316,7 @@ section{ padding:92px 0; border-bottom:1px solid var(--line-soft); position:rela
 .log-entry .lts{ font-family:var(--mono); font-size:11.5px; color:var(--green); margin-bottom:6px; display:block; }
 .log-entry h4{ font-size:15.5px; font-weight:700; color:var(--text-hi); margin-bottom:6px; font-family:var(--body); }
 .log-entry p{ color:var(--text-mid); font-size:13.5px; max-width:600px; }
-
+ 
 /* ============================= CONTACT ============================= */
 .contact{ border-bottom:none; padding-bottom:56px; }
 .contact-panel{
@@ -333,23 +331,22 @@ section{ padding:92px 0; border-bottom:1px solid var(--line-soft); position:rela
 .contact-link:hover{ border-color:var(--green); background:rgba(57,255,138,0.05); }
 .contact-link .arrow{ color:var(--text-low); transition:transform .15s; }
 .contact-link:hover .arrow{ color:var(--green); transform:translateX(3px); }
-
+ 
 footer{ padding:26px 0 34px; font-family:var(--mono); font-size:11px; color:var(--text-low); display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px; }
-
+ 
 .sr-only{ position:absolute; width:1px;height:1px; overflow:hidden; clip:rect(0,0,0,0); }
-
-/* scroll reveal */
+ 
 .reveal{ opacity:0; transform:translateY(16px); transition:opacity .6s ease, transform .6s ease; }
 .reveal.in{ opacity:1; transform:translateY(0); }
 </style>
 </head>
 <body>
-
+ 
 <div id="ambient"></div>
-
+ 
 <nav class="nav">
   <div class="nav-inner">
-    <div class="nav-id"><span class="tag">AK</span> akash-kumaran-t // live session</div>
+    <div class="nav-id"><span class="tag">AK</span> akash-kumaran-t // portfolio</div>
     <div class="nav-links">
       <span class="navlink" data-scroll="about" role="link" tabindex="0">about</span>
       <span class="navlink" data-scroll="skills" role="link" tabindex="0">skills</span>
@@ -361,15 +358,15 @@ footer{ padding:26px 0 34px; font-family:var(--mono); font-size:11px; color:var(
     <div class="nav-status"><span class="dot"></span> system: online</div>
   </div>
 </nav>
-
+ 
 <header class="hero">
   <div class="grid-bg"></div>
   <div class="wrap hero-grid">
     <div>
       <div class="boot-line" id="bootLine">initializing session<span class="ok">… ready</span></div>
-      <div class="eyebrow">SOC analyst track / blue team / security engineering</div>
+      <div class="eyebrow">SOC analyst track / blue team / security operations</div>
       <h1 style="margin-top:14px;">Akash Kumaran T<br>finds the <span class="accent">signal in the noise.</span></h1>
-      <p class="lead">Final-year B.E. Cyber Security student at Sri Shakthi Institute of Engineering and Technology, Coimbatore. I work the blue-team side — SIEM monitoring, malware triage, phishing detection, and web vulnerability assessment.</p>
+      <p class="lead">Final-year B.E. Computer Science (Cyber Security) student at Sri Shakthi Institute of Engineering and Technology, Coimbatore. Hands-on experience in SOC monitoring, SIEM-based threat detection, malware analysis, log investigation, and incident response.</p>
       <div class="hero-actions">
         <span class="btn btn-primary" data-scroll="projects" role="link" tabindex="0">View project files</span>
         <a class="btn btn-ghost" href="https://github.com/AkashKumaran17" target="_blank" rel="noopener">GitHub ↗</a>
@@ -378,10 +375,10 @@ footer{ padding:26px 0 34px; font-family:var(--mono); font-size:11px; color:var(
         <div class="stat"><div class="num">7591</div><div class="label">LetsDefend score</div></div>
         <div class="stat"><div class="num">100<span class="unit">%</span></div><div class="label">Case success rate</div></div>
         <div class="stat"><div class="num">Top 5<span class="unit">%</span></div><div class="label">TryHackMe rank</div></div>
-        <div class="stat"><div class="num">14</div><div class="label">Certifications</div></div>
+        <div class="stat"><div class="num">12</div><div class="label">Certifications</div></div>
       </div>
     </div>
-
+ 
     <div class="terminal" id="terminalWrap">
       <div class="term-bar">
         <span class="term-dot r"></span><span class="term-dot y"></span><span class="term-dot g"></span>
@@ -398,37 +395,37 @@ footer{ padding:26px 0 34px; font-family:var(--mono); font-size:11px; color:var(
     </div>
   </div>
 </header>
-
+ 
 <div class="ticker-wrap" aria-hidden="true">
   <div class="ticker-track" id="tickerTrack"></div>
 </div>
-
+ 
 <section id="about">
   <div class="wrap">
     <div class="section-head">
-      <h2 class="reveal">Subject profile</h2>
+      <h2 class="reveal">Profile</h2>
       <div class="section-tag">// background, contact, and the fields that matter for a quick read</div>
     </div>
     <div class="about-grid">
       <div class="reveal">
-        <p>I switched my full attention into cybersecurity early, and most of my time outside coursework goes into hands-on labs rather than slides — <strong>SOC simulations on LetsDefend, room-based exercises on TryHackMe, and building my own tools</strong> instead of only reading other people's writeups.</p>
-        <p>What I'm best at is the unglamorous part of security work: reading a log line carefully enough to know whether it's noise or the start of something, and writing it down clearly enough that someone else doesn't have to re-investigate it.</p>
-        <p>I'm currently in my final year, looking for opportunities on <strong>SOC operations, threat detection, or security engineering teams</strong> where I can keep doing exactly that.</p>
+        <p>Final-year Cyber Security student with hands-on experience in <strong>SOC monitoring, SIEM-based threat detection, malware analysis, log investigation, and incident response</strong> — built through structured lab work on LetsDefend and TryHackMe rather than coursework alone.</p>
+        <p>My focus is the investigative side of security: reading a log or an alert carefully enough to judge whether it is noise or the start of an incident, then documenting the finding clearly enough that no one has to re-investigate it.</p>
+        <p>I am currently seeking a <strong>SOC Analyst or Cybersecurity Analyst</strong> role where I can apply that same discipline to protect enterprise infrastructure against evolving threats.</p>
       </div>
       <div class="field-list reveal">
         <div class="field-row"><div class="k">NAME</div><div class="v">Akash Kumaran T</div></div>
-        <div class="field-row"><div class="k">PROGRAM</div><div class="v">B.E. CSE (Cyber Security) — Final Year</div></div>
+        <div class="field-row"><div class="k">PROGRAM</div><div class="v">B.E. CSE (Cyber Security) </div></div>
         <div class="field-row"><div class="k">INSTITUTION</div><div class="v">Sri Shakthi Institute of Engineering &amp; Technology, Coimbatore</div></div>
-        <div class="field-row"><div class="k">EMAIL</div><div class="v"><a href="mailto:akash014589@gmail.com">akash014589@gmail.com</a></div></div>
+        <div class="field-row"><div class="k">EMAIL</div><div class="v"><a href="mailto:akashkumarann17@gmail.com">akashkumarann17@gmail.com</a></div></div>
         <div class="field-row"><div class="k">PHONE</div><div class="v">+91 79045 10245</div></div>
         <div class="field-row"><div class="k">GITHUB</div><div class="v"><a href="https://github.com/AkashKumaran17" target="_blank" rel="noopener">github.com/AkashKumaran17</a></div></div>
         <div class="field-row"><div class="k">LINKEDIN</div><div class="v"><a href="https://www.linkedin.com/in/akash-kumaran-993845300" target="_blank" rel="noopener">linkedin.com/in/akash-kumaran</a></div></div>
-        <div class="field-row"><div class="k">FOCUS</div><div class="v">SOC analysis · Blue team · Malware triage</div></div>
+        <div class="field-row"><div class="k">FOCUS</div><div class="v">Security Engineer· SOC Analyst · Blue Team </div></div>
       </div>
     </div>
   </div>
 </section>
-
+ 
 <section id="skills">
   <div class="wrap">
     <div class="section-head">
@@ -447,28 +444,28 @@ footer{ padding:26px 0 34px; font-family:var(--mono); font-size:11px; color:var(
         <div class="locker-cell">
           <div class="lc-top"><span class="lc-id">// languages</span><div class="lc-bar-bg"><div class="lc-bar" data-pct="78"></div></div></div>
           <h3>Languages</h3>
-          <ul><li>Python</li><li>Java</li><li>SQL</li><li>JavaScript</li><li>Bash</li></ul>
+          <ul><li>Python</li><li>Core Java</li><li>SQL</li><li>JavaScript</li><li>Bash</li></ul>
         </div>
         <div class="locker-cell">
-          <div class="lc-top"><span class="lc-id">// tooling</span><div class="lc-bar-bg"><div class="lc-bar" data-pct="85"></div></div></div>
+          <div class="lc-top"><span class="lc-id">// tooling</span><div class="lc-bar-bg"><div class="lc-bar" data-pct="87"></div></div></div>
           <h3>Security tooling</h3>
-          <ul><li>Wazuh</li><li>Splunk</li><li>Wireshark</li><li>Nmap</li><li>VirusTotal</li><li>Hybrid Analysis</li></ul>
+          <ul><li>Splunk</li><li>Wazuh</li><li>Wireshark</li><li>Nmap</li><li>VirusTotal</li><li>Hybrid Analysis</li><li>PhishTank</li><li>AbuseIPDB</li><li>CyberChef</li></ul>
         </div>
         <div class="locker-cell">
           <div class="lc-top"><span class="lc-id">// concepts</span><div class="lc-bar-bg"><div class="lc-bar" data-pct="90"></div></div></div>
           <h3>Core concepts</h3>
-          <ul><li>SIEM</li><li>Threat detection</li><li>Malware analysis</li><li>Log analysis</li><li>OWASP Top 10</li><li>Network security</li><li>Phishing detection</li></ul>
+          <ul><li>SIEM</li><li>Security Monitoring</li><li>Threat Detection</li><li>Threat Hunting</li><li>Incident Response</li><li>Malware Analysis</li><li>Log Analysis</li><li>Phishing Detection</li><li>Network Security</li><li>Endpoint Security</li><li>Web Application Security</li><li>Cryptography</li><li>MITRE ATT&amp;CK</li><li>Cyber Kill Chain</li></ul>
         </div>
         <div class="locker-cell">
-          <div class="lc-top"><span class="lc-id">// web &amp; infra</span><div class="lc-bar-bg"><div class="lc-bar" data-pct="70"></div></div></div>
-          <h3>Web &amp; infra</h3>
-          <ul><li>HTML</li><li>CSS</li><li>REST APIs</li><li>Linux fundamentals</li></ul>
+          <div class="lc-top"><span class="lc-id">// cloud &amp; infra</span><div class="lc-bar-bg"><div class="lc-bar" data-pct="68"></div></div></div>
+          <h3>Cloud, web &amp; infra</h3>
+          <ul><li>AWS IAM</li><li>Amazon CloudWatch</li><li>Cloud Monitoring</li><li>Linux</li><li>Windows</li><li>HTML</li><li>CSS</li><li>REST APIs</li></ul>
         </div>
       </div>
     </div>
   </div>
 </section>
-
+ 
 <section id="projects">
   <div class="wrap">
     <div class="section-head">
@@ -476,7 +473,7 @@ footer{ padding:26px 0 34px; font-family:var(--mono); font-size:11px; color:var(
       <div class="section-tag">// click a row to expand the file. built, not just studied</div>
     </div>
     <div class="projects reveal" id="projectsList">
-
+ 
       <div class="proj" data-scan="92">
         <div class="proj-top">
           <div class="proj-left">
@@ -500,38 +497,14 @@ footer{ padding:26px 0 34px; font-family:var(--mono); font-size:11px; color:var(
           </div>
         </div>
       </div>
-
-      <div class="proj" data-scan="100">
-        <div class="proj-top">
-          <div class="proj-left">
-            <div class="proj-id"><span class="n">02</span></div>
-            <div>
-              <h3>Post-Quantum Cryptography secure communication system</h3>
-              <div class="proj-summary">Hybrid key exchange · downgrade-attack detection</div>
-            </div>
-          </div>
-          <div class="proj-right">
-            <span class="status-pill status-done">completed</span>
-            <span class="proj-chevron">▾</span>
-          </div>
-        </div>
-        <div class="proj-body">
-          <div class="proj-body-inner">
-            <p>A hybrid key-exchange implementation combining ML-KEM-768 with X25519, built to stay secure against both classical and quantum adversaries. Includes simulated downgrade attacks and a real-time dashboard for detecting them as they happen.</p>
-            <div class="proj-tags"><span>ML-KEM-768</span><span>X25519</span><span>Hybrid Key Exchange</span><span>Attack Simulation</span></div>
-            <div class="scan-bar"><div class="scan-bar-fill"></div></div>
-            <div class="scan-label"><span>build status</span><span class="scan-pct">100%</span></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="proj" data-scan="80">
+ 
+      <div class="proj" data-scan="88">
         <div class="proj-top">
           <div class="proj-left">
             <div class="proj-id"><span class="n">03</span></div>
             <div>
-              <h3>WebScan — modular web vulnerability scanner</h3>
-              <div class="proj-summary">Crawler + payload injection · OWASP Top 10 mapped</div>
+              <h3>Unicode Homograph &amp; IDN Phishing Detection System</h3>
+              <div class="proj-summary">Risk-scoring engine · brand impersonation &amp; typosquatting detection</div>
             </div>
           </div>
           <div class="proj-right">
@@ -541,14 +514,14 @@ footer{ padding:26px 0 34px; font-family:var(--mono); font-size:11px; color:var(
         </div>
         <div class="proj-body">
           <div class="proj-body-inner">
-            <p>A lightweight scanner built to automate security assessment of web applications, integrating crawling, form extraction, payload injection, and detection logic mapped to the OWASP Top 10 — built to be extended with new checks rather than rewritten.</p>
-            <div class="proj-tags"><span>Web Crawling</span><span>Payload Injection</span><span>OWASP Top 10</span><span>Python</span></div>
+            <p>A Chrome extension that detects Unicode homograph attacks, IDN phishing, brand impersonation, and typosquatting through real-time URL analysis and a weighted risk-scoring engine powered by threat intelligence.</p>
+            <div class="proj-tags"><span>Unicode Homograph Detection</span><span>Risk Scoring</span><span>Threat Intelligence</span><span>JavaScript</span></div>
             <div class="scan-bar"><div class="scan-bar-fill"></div></div>
-            <div class="scan-label"><span>OWASP Top 10 coverage</span><span class="scan-pct">80%</span></div>
+            <div class="scan-label"><span>detection coverage (self-assessed)</span><span class="scan-pct">88%</span></div>
           </div>
         </div>
       </div>
-
+ 
       <div class="proj" data-scan="100">
         <div class="proj-top">
           <div class="proj-left">
@@ -565,18 +538,18 @@ footer{ padding:26px 0 34px; font-family:var(--mono); font-size:11px; color:var(
         </div>
         <div class="proj-body">
           <div class="proj-body-inner">
-            <p>Built and ran the website hosting a cryptography puzzle competition end-to-end: published problem statements, managed live participation, and judged winners on solution accuracy and completeness.</p>
+            <p>Built and managed a website hosting a cryptography puzzle competition end-to-end: published problem statements, coordinated live participation, and evaluated winners on solution accuracy and completeness.</p>
             <div class="proj-tags"><span>Event Platform</span><span>Cryptography</span><span>Web Dev</span></div>
             <div class="scan-bar"><div class="scan-bar-fill"></div></div>
             <div class="scan-label"><span>event delivered</span><span class="scan-pct">100%</span></div>
           </div>
         </div>
       </div>
-
+ 
     </div>
   </div>
 </section>
-
+ 
 <section id="certs">
   <div class="wrap">
     <div class="section-head">
@@ -584,8 +557,6 @@ footer{ padding:26px 0 34px; font-family:var(--mono); font-size:11px; color:var(
       <div class="section-tag">// issuer-verified, dated, filed in order</div>
     </div>
     <div class="cert-grid reveal">
-      <div class="cert"><span class="verify-tag">verified</span><div class="issuer">TryHackMe</div><h4>Security Engineer</h4><div class="date">Path completion</div></div>
-      <div class="cert"><span class="verify-tag">verified</span><div class="issuer">TryHackMe</div><h4>SOC Level 1</h4><div class="date">Path completion</div></div>
       <div class="cert"><span class="verify-tag">verified</span><div class="issuer">Deloitte</div><h4>Cyber Job Simulation</h4><div class="date">Job simulation programme</div></div>
       <div class="cert"><span class="verify-tag">verified</span><div class="issuer">LetsDefend</div><h4>SOC Analyst Learning Path</h4><div class="date">Issued 31 Dec 2025</div></div>
       <div class="cert"><span class="verify-tag">verified</span><div class="issuer">LetsDefend</div><h4>SIEM Engineer Career Path</h4><div class="date">Issued 17 Mar 2026</div></div>
@@ -601,7 +572,7 @@ footer{ padding:26px 0 34px; font-family:var(--mono); font-size:11px; color:var(
     </div>
   </div>
 </section>
-
+ 
 <section id="log">
   <div class="wrap">
     <div class="section-head">
@@ -610,25 +581,25 @@ footer{ padding:26px 0 34px; font-family:var(--mono); font-size:11px; color:var(
     </div>
     <div class="log reveal">
       <div class="log-entry"><span class="lts">2021</span><h4>Class X completed</h4><p>Sri Vidya Matriculation Higher Secondary School, Virudhunagar.</p></div>
-      <div class="log-entry"><span class="lts">2023</span><h4>Class XII completed — 82.5%</h4><p>Sri Vidya Matriculation Higher Secondary School, Virudhunagar.</p></div>
-      <div class="log-entry"><span class="lts">2023 — Present</span><h4>B.E. CSE (Cyber Security) — CGPA 7.75</h4><p>Sri Shakthi Institute of Engineering and Technology, Coimbatore. Final year.</p></div>
+      <div class="log-entry"><span class="lts">2023</span><h4>Class XII completed — 83%</h4><p>Sri Vidya Matriculation Higher Secondary School, Virudhunagar.</p></div>
+      <div class="log-entry"><span class="lts">2023 — Present</span><h4>B.E. CSE (Cyber Security) — CGPA 7.9</h4><p>Sri Shakthi Institute of Engineering and Technology, Coimbatore. Final year.</p></div>
       <div class="log-entry"><span class="lts">Ongoing</span><h4>District-Level English Proficiency Test — Certified</h4><p>Academic recognition alongside core security coursework.</p></div>
       <div class="log-entry"><span class="lts">Ongoing</span><h4>HackQuest — Top 30 finish</h4><p>Placed among the top 30 participants in a competitive security event.</p></div>
-      <div class="log-entry"><span class="lts">Ongoing</span><h4>125+ badges on LetsDefend; Top 5% on TryHackMe</h4><p>Sustained hands-on practice across SOC simulation rooms and blue-team exercises.</p></div>
+      <div class="log-entry"><span class="lts">Ongoing</span><h4>100+ SOC investigation labs completed; Top 5% on TryHackMe; 130+ Badges on Letsdefend</h4><p>Sustained hands-on practice across SOC simulation rooms and blue-team exercises.</p></div>
     </div>
   </div>
 </section>
-
+ 
 <section id="contact" class="contact">
   <div class="wrap">
     <div class="contact-panel reveal">
       <div>
-        <h2>Open a line.</h2>
-        <p>Looking for SOC analyst, threat detection, or security engineering opportunities — internships or full-time, on-site or remote. If your team reads logs for a living, I'd like to talk.</p>
-        <p style="margin-top:-10px; color:var(--text-low); font-size:13px;">Cybersecurity enthusiast · SOC analyst · Blue team · Security engineer · Malware analysis · Network security</p>
+        <h2>Get in touch.</h2>
+        <p>Seeking a SOC Analyst or Cybersecurity Analyst role — internships or full-time, on-site or remote. If your team investigates logs and alerts for a living, I would welcome the conversation.</p>
+        <p style="margin-top:-10px; color:var(--text-low); font-size:13px;">SOC analyst · Blue team · Threat detection · Malware analysis · Incident response · Network security</p>
       </div>
       <div class="contact-links">
-        <a class="contact-link" href="mailto:akash014589@gmail.com">akash014589@gmail.com <span class="arrow">↗</span></a>
+        <a class="contact-link" href="mailto:akashkumarann17@gmail.com">akashkumarann17@gmail.com <span class="arrow">↗</span></a>
         <a class="contact-link" href="tel:+917904510245">+91 79045 10245 <span class="arrow">↗</span></a>
         <a class="contact-link" href="https://www.linkedin.com/in/akash-kumaran-993845300" target="_blank" rel="noopener">LinkedIn profile <span class="arrow">↗</span></a>
         <a class="contact-link" href="https://github.com/AkashKumaran17" target="_blank" rel="noopener">GitHub — AkashKumaran17 <span class="arrow">↗</span></a>
@@ -637,14 +608,14 @@ footer{ padding:26px 0 34px; font-family:var(--mono); font-size:11px; color:var(
   </div>
   <div class="wrap">
     <footer>
-      <span>© 2026 Akash Kumaran T — session logged, not closed.</span>
+      <span>© 2026 Akash Kumaran T</span>
       <span>Coimbatore, Tamil Nadu, India</span>
     </footer>
   </div>
 </section>
-
+ 
 <script>
-/* ===================== internal nav: smooth-scroll, zero href, zero history API ===================== */
+/* ===================== internal nav: smooth-scroll ===================== */
 (function(){
   function goTo(id){
     const target = document.getElementById(id);
@@ -660,7 +631,7 @@ footer{ padding:26px 0 34px; font-family:var(--mono); font-size:11px; color:var(
     });
   });
 })();
-
+ 
 /* ===================== ambient cursor glow ===================== */
 (function(){
   const root = document.documentElement;
@@ -669,7 +640,7 @@ footer{ padding:26px 0 34px; font-family:var(--mono); font-size:11px; color:var(
     root.style.setProperty('--my', e.clientY+'px');
   }, {passive:true});
 })();
-
+ 
 /* ===================== scroll reveal ===================== */
 (function(){
   const items = document.querySelectorAll('.reveal');
@@ -678,7 +649,7 @@ footer{ padding:26px 0 34px; font-family:var(--mono); font-size:11px; color:var(
   }, {threshold:0.15});
   items.forEach(i=>io.observe(i));
 })();
-
+ 
 /* ===================== decode-on-scroll headings ===================== */
 (function(){
   const glyphs = '01░▒▓█▌▐#$%&@*+=<>/\\';
@@ -712,65 +683,61 @@ footer{ padding:26px 0 34px; font-family:var(--mono); font-size:11px; color:var(
   }, {threshold:0.5});
   heads.forEach(h=>io.observe(h));
 })();
-
+ 
 /* ===================== threat feed ticker ===================== */
 (function(){
   const items = [
-    ['SOC-LOG', 'akash@soc :: 125+ LetsDefend badges earned'],
-    ['SCAN', 'WebScan :: OWASP Top 10 coverage at 80% and climbing'],
+    ['SOC-LOG', 'akash@soc :: 100+ SOC investigation labs completed'],
     ['CERT', 'LetsDefend :: SIEM Engineer career path — issued'],
     ['RANK', 'TryHackMe :: holding Top 5% global rank'],
     ['BUILD', 'BrowserGuard :: phishing-link scan active on Gmail + Outlook'],
     ['CERT', 'LetsDefend :: SOC Analyst learning path — issued'],
     ['EVENT', 'HackQuest :: finished inside Top 30'],
     ['BUILD', 'PQC system :: ML-KEM-768 + X25519 hybrid exchange — stable'],
-    ['STATUS', 'final-year B.E. Cyber Security :: open to SOC roles'],
+    ['BUILD', 'Homograph detector :: risk-scoring engine — active dev'],
+    ['STATUS', 'final-year B.E. Cyber Security :: open to SOC Analyst roles'],
   ];
   const track = document.getElementById('tickerTrack');
   const doubled = [...items, ...items];
   track.innerHTML = doubled.map(([tag,text])=>`<span>${tag}</span>${text}`).join('<span style="color:var(--line); margin:0 8px;">//</span>');
 })();
-
-/* ===================== skill radar — modeled on real TryHackMe / LetsDefend profile shape ===================== */
+ 
+/* ===================== skill radar ===================== */
 (function(){
   const data = [
-    {label:'Security Operations', value:0.95, detail:'TryHackMe Senior Foundational · SOC Level 1 path · LetsDefend 7591 pts'},
-    {label:'Incident Response', value:0.82, detail:'LetsDefend case triage · 94 SLA · 100% success rate'},
+    {label:'Security Operations', value:0.95, detail:'SOC Analyst Learning Path · LetsDefend 7591 pts · 100% case success'},
+    {label:'Incident Response', value:0.82, detail:'LetsDefend case triage · 100% success rate on investigated cases'},
     {label:'Malware Analysis', value:0.78, detail:'LetsDefend Malware Analysis Skill Path · VirusTotal, Hybrid Analysis'},
-    {label:'Web / App Security', value:0.72, detail:'OWASP Top 10 · WebScan project · payload fuzzing'},
-    {label:'Exploitation', value:0.4, detail:'Foundational exposure · growing focus area'},
-    {label:'Red Teaming', value:0.32, detail:'Foundational exposure · blue-team focus instead'},
+    {label:'Web / App Security', value:0.72, detail:'OWASP fundamentals · phishing-detection projects · risk scoring'},
+    {label:'Cloud Security', value:0.5, detail:'AWS IAM, Amazon CloudWatch, cloud monitoring fundamentals'},
+    {label:'Networking & Systems', value:0.6, detail:'Linux, Windows, Cisco Networking Academy fundamentals'},
   ];
   const svg = document.getElementById('radarSvg');
   const cx=200, cy=190, R=130;
   const n = data.length;
   const angle = (i)=> (Math.PI*2*i/n) - Math.PI/2;
   const pt = (i, r)=> [cx + r*Math.cos(angle(i)), cy + r*Math.sin(angle(i))];
-
+ 
   let svgContent = '';
-  // concentric filled rings, styled after real LetsDefend/TryHackMe radar dashboards
   const ringFills = ['rgba(57,255,138,0.025)','rgba(57,255,138,0.045)','rgba(57,255,138,0.07)','rgba(57,255,138,0.10)'];
   [1,0.75,0.5,0.25].forEach((f,idx)=>{
     const pts = data.map((_,i)=>pt(i, R*f).join(',')).join(' ');
     svgContent += `<polygon points="${pts}" fill="${ringFills[idx]}" stroke="var(--line)" stroke-width="1" />`;
   });
-  // axes + labels
   data.forEach((d,i)=>{
     const [x,y] = pt(i, R);
     svgContent += `<line class="radar-axis" x1="${cx}" y1="${cy}" x2="${x}" y2="${y}" />`;
     const [lx,ly] = pt(i, R+36);
     svgContent += `<text class="radar-axis-label" x="${lx}" y="${ly}" text-anchor="middle" dominant-baseline="middle">${d.label}</text>`;
   });
-  // shape
   const shapePts = data.map((d,i)=> pt(i, R*d.value).join(',')).join(' ');
   svgContent += `<polygon class="radar-shape" id="radarShape" points="${shapePts}" />`;
-  // points
   data.forEach((d,i)=>{
     const [x,y] = pt(i, R*d.value);
     svgContent += `<circle class="radar-point" cx="${x}" cy="${y}" r="5" data-label="${d.label}" data-detail="${d.detail}" data-value="${Math.round(d.value*100)}" />`;
   });
   svg.innerHTML = svgContent;
-
+ 
   const detailEl = document.getElementById('skillDetail');
   svg.querySelectorAll('.radar-point').forEach(p=>{
     p.addEventListener('mouseenter', ()=>{
@@ -782,8 +749,7 @@ footer{ padding:26px 0 34px; font-family:var(--mono); font-size:11px; color:var(
     p.addEventListener('focus', ()=> p.dispatchEvent(new Event('mouseenter')));
     p.setAttribute('tabindex','0');
   });
-
-  // animate shape in on scroll
+ 
   const shape = document.getElementById('radarShape');
   shape.style.opacity = '0';
   shape.style.transform = 'scale(0.7)';
@@ -800,7 +766,7 @@ footer{ padding:26px 0 34px; font-family:var(--mono); font-size:11px; color:var(
   }, {threshold:0.3});
   io.observe(svg);
 })();
-
+ 
 /* ===================== skill bars fill on scroll ===================== */
 (function(){
   const bars = document.querySelectorAll('.lc-bar');
@@ -815,7 +781,7 @@ footer{ padding:26px 0 34px; font-family:var(--mono); font-size:11px; color:var(
   }, {threshold:0.4});
   bars.forEach(b=>io.observe(b));
 })();
-
+ 
 /* ===================== project accordion + scan bar ===================== */
 (function(){
   document.querySelectorAll('.proj-top').forEach(top=>{
@@ -835,13 +801,13 @@ footer{ padding:26px 0 34px; font-family:var(--mono); font-size:11px; color:var(
     top.addEventListener('keydown', (e)=>{ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); top.click(); } });
   });
 })();
-
-/* ===================== terminal ===================== */
+ 
+/* ===================== terminal (kept exactly as designed) ===================== */
 (function(){
   const body = document.getElementById('termBody');
   const input = document.getElementById('termInput');
   const bootLine = document.getElementById('bootLine');
-
+ 
   function printLine(html, cls){
     const div = document.createElement('div');
     div.className = 'term-line ' + (cls||'out');
@@ -850,20 +816,20 @@ footer{ padding:26px 0 34px; font-family:var(--mono); font-size:11px; color:var(
     body.scrollTop = body.scrollHeight;
   }
   function printCmd(cmd){ printLine(cmd, 'cmd'); }
-
+ 
   const responses = {
     help: `available commands: <span class="hl">whoami</span>, <span class="hl">skills</span>, <span class="hl">projects</span>, <span class="hl">certs</span>, <span class="hl">timeline</span>, <span class="hl">contact</span>, <span class="hl">sudo</span>, <span class="hl">clear</span>`,
-    whoami: `<span class="hl">akash_kumaran_t</span> — final-year B.E. Cyber Security student, Sri Shakthi Institute of Engineering &amp; Technology, Coimbatore.\nfocus: SOC analysis, blue team, malware triage, web vulnerability assessment.`,
-    skills: `languages: Python, Java, SQL, JavaScript, Bash\ntools: Wazuh, Splunk, Wireshark, Nmap, VirusTotal, Hybrid Analysis\nconcepts: SIEM, threat detection, malware analysis, log analysis, OWASP Top 10, phishing detection\n<span class="ok">→ scroll to #skills for the interactive radar</span>`,
-    projects: `01. BrowserGuard — real-time phishing/threat-detection Chrome extension\n02. Post-Quantum Cryptography secure comms (ML-KEM-768 + X25519)\n03. WebScan — modular OWASP Top 10 vulnerability scanner\n04. Crypto Puzzle (Kalam) — competition platform, coordinated end-to-end\n<span class="ok">→ scroll to #projects to expand each file</span>`,
-    certs: `14 certifications on file — LetsDefend (SOC Analyst, SIEM Engineer, Malware Analysis +4 more), TryHackMe (SOC Level 1, Security Engineer), Deloitte Cyber Job Simulation, Cisco Networking Academy (x3), Linux Fundamentals.\n<span class="ok">→ scroll to #certs for the full case file</span>`,
-    timeline: `2021 — Class X\n2023 — Class XII, 82.5%\n2023–present — B.E. CSE (Cyber Security), CGPA 7.75\nongoing — Top 30 HackQuest · 125+ LetsDefend badges · Top 5% TryHackMe`,
-    contact: `email: <span class="hl">akash014589@gmail.com</span>\nphone: <span class="hl">+91 79045 10245</span>\ngithub: <span class="hl">github.com/AkashKumaran17</span>\nlinkedin: <span class="hl">linkedin.com/in/akash-kumaran</span>`,
-    sudo: `<span class="warn">permission denied: nice try though.</span>`,
+    whoami: `<span class="hl">akash_kumaran_t</span> — final-year B.E. Cyber Security student, Sri Shakthi Institute of Engineering &amp; Technology, Coimbatore.\nfocus: SOC analysis, threat detection, malware analysis, incident response.`,
+    skills: `languages: Python, Core Java, SQL, JavaScript, Bash\ntools: Splunk, Wazuh, Wireshark, Nmap, VirusTotal, Hybrid Analysis, PhishTank, AbuseIPDB, CyberChef\nconcepts: SIEM, threat detection, threat hunting, incident response, malware analysis, log analysis, MITRE ATT&CK\n<span class="ok">→ scroll to #skills for the interactive radar</span>`,
+    projects: `01. BrowserGuard — real-time phishing/threat-detection Chrome extension\n02. Post-Quantum Cryptography secure comms (ML-KEM-768 + X25519)\n03. Unicode Homograph &amp; IDN Phishing Detection System\n04. Crypto Puzzle (Kalam) — competition platform, coordinated end-to-end\n<span class="ok">→ scroll to #projects to expand each file</span>`,
+    certs: `12 certifications on file — LetsDefend (SOC Analyst, SIEM Engineer, Malware Analysis +4 more), Deloitte Cyber Job Simulation, Cisco Networking Academy (x3), Linux Fundamentals.\n<span class="ok">→ scroll to #certs for the full case file</span>`,
+    timeline: `2021 — Class X\n2023 — Class XII, 82.5%\n2023–present — B.E. CSE (Cyber Security), CGPA 7.85\nongoing — Top 30 HackQuest · 100+ SOC labs completed · Top 5% TryHackMe`,
+    contact: `email: <span class="hl">akashkumarann17@gmail.com</span>\nphone: <span class="hl">+91 79045 10245</span>\ngithub: <span class="hl">github.com/AkashKumaran17</span>\nlinkedin: <span class="hl">linkedin.com/in/akash-kumaran</span>`,
+    sudo: `<span class="warn">permission denied.</span>`,
     ls: `about/  skills/  projects/  certs/  timeline/  contact/`,
     clear: '__CLEAR__'
   };
-
+ 
   function handle(raw){
     const cmd = raw.trim().toLowerCase();
     if(!cmd) return;
@@ -875,7 +841,7 @@ footer{ padding:26px 0 34px; font-family:var(--mono); font-size:11px; color:var(
       printLine(`<span class="err">command not found: ${raw}</span> — type <span class="hl">help</span> for available commands`);
     }
   }
-
+ 
   input.addEventListener('keydown', (e)=>{
     if(e.key === 'Enter'){
       const val = input.value;
@@ -883,19 +849,18 @@ footer{ padding:26px 0 34px; font-family:var(--mono); font-size:11px; color:var(
       handle(val);
     }
   });
-
+ 
   document.querySelectorAll('#termHint button').forEach(btn=>{
     btn.addEventListener('click', ()=>{
       handle(btn.dataset.cmd);
       input.focus();
     });
   });
-
-  // boot sequence
+ 
   const bootSteps = [
     'loading profile… <span class="ok">ok</span>',
     'mounting skillset… <span class="ok">ok</span>',
-    'verifying certifications… <span class="ok">14 found</span>',
+    'verifying certifications… <span class="ok">12 found</span>',
     'session ready.'
   ];
   let bi = 0;
@@ -911,6 +876,8 @@ footer{ padding:26px 0 34px; font-family:var(--mono); font-size:11px; color:var(
   setTimeout(nextBoot, 350);
 })();
 </script>
-
+ 
 </body>
 </html>
+ 
+
